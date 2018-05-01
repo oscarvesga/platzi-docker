@@ -10,4 +10,13 @@ def test_should_have_hitos_stored_ok():
 
 def test_should_return_hitos_ok_and_raise_err():
 	hitos = HitosIV()
-	assert hitos.uno(0)["file"] == "0.Repositorio" 
+	assert hitos.uno(0)["file"] == "0.Repositorio"
+	try:
+		zipi = hitos.uno(-1)
+	except Exception as e:
+		assert type(e) is IndexError
+
+	try:
+		zipi = hitos.uno(99)
+	except Exception as e:
+		assert type(e) is IndexError
