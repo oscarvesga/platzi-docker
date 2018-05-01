@@ -6,6 +6,5 @@ Curso de docker en platzi
 ##
 
 # Test en python
-```
 	pytest
-```
+#
